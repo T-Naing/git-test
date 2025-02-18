@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /home/jovyan/
 
 # Define environment variables
-ENV NB_USER jovyan
-ENV NB_UID 1000
+ENV NB_USER=jovyan
+ENV NB_UID=1000
 
 # Run Jupyter Notebook when the container launches
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser"]
